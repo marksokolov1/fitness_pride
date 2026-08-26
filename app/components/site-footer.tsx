@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import { SiInstagram, SiTelegram, SiVk } from 'react-icons/si';
 
 const socials = [
-  { label: 'Telegram', href: 'https://t.me/igor_maistruk' },
-  { label: 'VK', href: 'https://vk.ru/fitness_pride_donetsk' },
-  { label: 'Instagram', href: 'https://www.instagram.com/fitness_pride_donetsk/' },
+  { label: 'Telegram', href: 'https://t.me/igor_maistruk', Icon: SiTelegram },
+  { label: 'VK', href: 'https://vk.ru/fitness_pride_donetsk', Icon: SiVk },
+  { label: 'Instagram', href: 'https://www.instagram.com/fitness_pride_donetsk/', Icon: SiInstagram },
 ];
 
 export function SiteFooter() {
@@ -32,8 +33,11 @@ export function SiteFooter() {
           <a className="site-footer__phone" href="tel:+79786456072">+7 (978) 645-60-72</a>
           <span>Донецк, ул. Артёма, 198</span>
           <div>
-            {socials.map((social) => (
-              <a href={social.href} key={social.label} target="_blank" rel="noreferrer">{social.label}<span aria-hidden="true">↗</span></a>
+            {socials.map(({ label, href, Icon }) => (
+              <a href={href} key={label} target="_blank" rel="noreferrer">
+                <Icon aria-hidden="true" focusable="false" />
+                <span>{label}</span>
+              </a>
             ))}
           </div>
         </div>

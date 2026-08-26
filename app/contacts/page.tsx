@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SiInstagram, SiTelegram, SiVk } from 'react-icons/si';
 import { SiteHeader } from '../components/site-header';
 
 export const metadata: Metadata = {
@@ -99,9 +100,9 @@ export default function ContactsPage() {
             <h2 id="contact-socials-title">Следите за жизнью школы</h2>
           </div>
           <div>
-            <a href="https://t.me/igor_maistruk" target="_blank" rel="noreferrer"><span>TG</span><strong>Telegram</strong><b aria-hidden="true">↗</b></a>
-            <a href="https://vk.ru/fitness_pride_donetsk" target="_blank" rel="noreferrer"><span>VK</span><strong>ВКонтакте</strong><b aria-hidden="true">↗</b></a>
-            <a href="https://www.instagram.com/fitness_pride_donetsk/" target="_blank" rel="noreferrer"><span>IG</span><strong>Instagram</strong><b aria-hidden="true">↗</b></a>
+            <a href="https://t.me/igor_maistruk" target="_blank" rel="noreferrer"><SiTelegram aria-hidden="true" focusable="false" /><strong>Telegram</strong><b aria-hidden="true">↗</b></a>
+            <a href="https://vk.ru/fitness_pride_donetsk" target="_blank" rel="noreferrer"><SiVk aria-hidden="true" focusable="false" /><strong>ВКонтакте</strong><b aria-hidden="true">↗</b></a>
+            <a href="https://www.instagram.com/fitness_pride_donetsk/" target="_blank" rel="noreferrer"><SiInstagram aria-hidden="true" focusable="false" /><strong>Instagram</strong><b aria-hidden="true">↗</b></a>
           </div>
         </div>
       </section>

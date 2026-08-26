@@ -3785,11 +3785,18 @@ a {
   font-size: 10px;
   font-weight: 800;
   text-transform: uppercase;
-  transition: border-color 180ms ease, color 180ms ease;
+  transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease;
+}
+
+.site-footer__contacts > div a svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
 }
 
 .site-footer__contacts > div a:hover,
 .site-footer__contacts > div a:focus-visible {
+  background: rgba(245,180,0,.07);
   border-color: var(--brand-yellow);
   color: var(--brand-yellow);
 }
@@ -3860,9 +3867,9 @@ a {
   padding-left: 10px;
 }
 
-.contact-socials__grid > div:last-child span {
-  font-size: 10px;
-  font-weight: 900;
+.contact-socials__grid > div:last-child svg {
+  width: 23px;
+  height: 23px;
 }
 
 .contact-socials__grid > div:last-child strong {
