@@ -272,6 +272,112 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="advantages" id="advantages" aria-labelledby="advantages-title">
+        <div className="advantages__orb" aria-hidden="true" />
+        <div className="container">
+          <header className="advantages__heading">
+            <div>
+              <p className="section-kicker section-kicker--dark">
+                02 · Преимущества школы
+              </p>
+              <p className="section-index section-index--dark" aria-hidden="true">
+                FP / APPROACH
+              </p>
+            </div>
+            <div>
+              <h2 id="advantages-title">
+                Почему
+                <br />
+                <em>Fitness Pride?</em>
+              </h2>
+              <p>
+                Обучение построено так, чтобы знания не оставались теорией:
+                методисты сопровождают движение по программе и помогают
+                закреплять материал через задания и тестирование.
+              </p>
+            </div>
+          </header>
+
+          <div className="advantages__grid">
+            <article className="advantage-feature">
+              <div className="advantage-feature__topline">
+                <span>Главное отличие</span>
+                <small>01 / 05</small>
+              </div>
+              <h3>Прямая обратная связь от методистов</h3>
+              <p>
+                Вопросы по учебному материалу разбирают специалисты школы,
+                которые знают программу и сопровождают обучающихся на каждом
+                этапе.
+              </p>
+
+              <div className="expert-path" aria-label="Прямое взаимодействие с методистом">
+                <div>
+                  <small>Обучающийся</small>
+                  <strong>Вы</strong>
+                </div>
+                <span aria-hidden="true">
+                  <i />
+                  <b>напрямую</b>
+                  <i />
+                </span>
+                <div>
+                  <small>Эксперт</small>
+                  <strong>Методист</strong>
+                </div>
+              </div>
+            </article>
+
+            <div className="advantage-list">
+              <article>
+                <span>02</span>
+                <p className="advantage-list__icon" aria-hidden="true">∞</p>
+                <h3>Доступ навсегда</h3>
+                <p>
+                  Все учебные модули остаются доступными после завершения
+                  программы.
+                </p>
+              </article>
+              <article>
+                <span>03</span>
+                <p className="advantage-list__icon" aria-hidden="true">↗</p>
+                <h3>От знаний к навыкам</h3>
+                <p>
+                  Модульная система, домашние задания и тестирование помогают
+                  последовательно закреплять материал.
+                </p>
+              </article>
+              <article>
+                <span>04</span>
+                <p className="advantage-list__icon" aria-hidden="true">+</p>
+                <h3>Питание уже включено</h3>
+                <p>
+                  Основы рационального питания входят в программы подготовки,
+                  а не продаются отдельным курсом.
+                </p>
+              </article>
+              <article>
+                <span>05</span>
+                <p className="advantage-list__icon" aria-hidden="true">24</p>
+                <h3>Старт в любой момент</h3>
+                <p>
+                  Начните обучение без привязки к фиксированной дате и двигайтесь
+                  по программе в удобное время.
+                </p>
+              </article>
+            </div>
+          </div>
+
+          <footer className="advantages__footer">
+            <p>Профессиональные знания · Последовательная практика · Поддержка специалистов</p>
+            <a href="tel:+79786456072">
+              Обсудить обучение
+              <span aria-hidden="true">↗</span>
+            </a>
+          </footer>
+        </div>
+      </section>
     </main>
   );
 }
