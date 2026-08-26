@@ -55,6 +55,39 @@ const programs = [
   },
 ];
 
+const learningStages = [
+  {
+    number: '01',
+    title: 'Выбор программы',
+    text: 'Определяем направление подготовки: тренажёрный зал, групповые программы или комплексный формат.',
+    label: 'Старт',
+  },
+  {
+    number: '02',
+    title: 'Теоретическая база',
+    text: 'Последовательно изучаем анатомию, физиологию, рациональное питание и первую доврачебную помощь.',
+    label: 'Модули',
+  },
+  {
+    number: '03',
+    title: 'Практическая отработка',
+    text: 'Учимся демонстрировать и презентовать упражнения, составлять программы и работать с выбранным форматом занятий.',
+    label: 'Навыки',
+  },
+  {
+    number: '04',
+    title: 'Задания и тестирование',
+    text: 'Закрепляем каждый этап домашними заданиями и тестами с постоянной обратной связью от методистов.',
+    label: 'Контроль',
+  },
+  {
+    number: '05',
+    title: 'Завершение обучения',
+    text: 'Получаем сертификат, который входит в стоимость, и сохраняем постоянный доступ ко всем учебным модулям.',
+    label: 'Результат',
+  },
+];
+
 function BrandMark() {
   return (
     <a className="brand" href="#top" aria-label="Fitness Pride — на главную">
@@ -376,6 +409,66 @@ export default function Home() {
               <span aria-hidden="true">↗</span>
             </a>
           </footer>
+        </div>
+      </section>
+
+      <section className="methodology" id="methodology" aria-labelledby="methodology-title">
+        <div className="container methodology__layout">
+          <div className="methodology__intro">
+            <p className="section-kicker">03 · Учебный процесс</p>
+            <h2 id="methodology-title">
+              Как проходит
+              <br />
+              <em>обучение</em>
+            </h2>
+            <p>
+              Программа построена по модульной системе: новый материал
+              открывается последовательно и закрепляется практикой, заданиями
+              и проверкой знаний.
+            </p>
+
+            <div className="methodology__summary">
+              <div>
+                <strong>2</strong>
+                <span>месяца обучения</span>
+              </div>
+              <div>
+                <strong>5</strong>
+                <span>понятных этапов</span>
+              </div>
+            </div>
+
+            <a className="button" href="tel:+79786456072">
+              Подобрать программу
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <ol className="learning-path">
+            {learningStages.map((stage, index) => (
+              <li key={stage.number}>
+                <div className="learning-path__marker" aria-hidden="true">
+                  <span>{stage.number}</span>
+                  {index < learningStages.length - 1 && <i />}
+                </div>
+                <article>
+                  <small>{stage.label}</small>
+                  <h3>{stage.title}</h3>
+                  <p>{stage.text}</p>
+                </article>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div className="methodology__strip" aria-hidden="true">
+          <span>Теория</span>
+          <i />
+          <span>Практика</span>
+          <i />
+          <span>Обратная связь</span>
+          <i />
+          <span>Результат</span>
         </div>
       </section>
     </main>
