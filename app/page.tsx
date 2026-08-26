@@ -580,6 +580,101 @@ export default function Home() {
           </footer>
         </div>
       </section>
+
+      <section className="graduates" id="graduates" aria-labelledby="graduates-title">
+        <div className="container">
+          <header className="graduates__heading">
+            <div>
+              <p className="section-kicker">05 · Выпускники</p>
+              <p className="section-index" aria-hidden="true">
+                FP / RESULT
+              </p>
+            </div>
+            <div>
+              <h2 id="graduates-title">
+                От обучения
+                <br />
+                <em>к результату</em>
+              </h2>
+              <p>
+                Каждая фотография — реальная группа Fitness Pride. Обучающиеся
+                проходят теорию, отрабатывают упражнения на практике и
+                завершают программу получением сертификата.
+              </p>
+            </div>
+          </header>
+
+          <div className="graduate-gallery">
+            <figure className="graduate-photo graduate-photo--main">
+              <Image
+                src="/graduates/graduation-group.jpg"
+                alt="Выпускники Fitness Pride с сертификатами после завершения обучения"
+                fill
+                sizes="(max-width: 800px) 100vw, 60vw"
+              />
+              <div className="graduate-photo__shade" aria-hidden="true" />
+              <figcaption>
+                <span>01 · Завершение программы</span>
+                <strong>Знания закреплены результатом</strong>
+              </figcaption>
+            </figure>
+
+            <figure className="graduate-photo graduate-photo--practice">
+              <Image
+                src="/graduates/practical-training.jpg"
+                alt="Практическое занятие Fitness Pride в тренажёрном зале"
+                fill
+                sizes="(max-width: 800px) 100vw, 40vw"
+              />
+              <div className="graduate-photo__shade" aria-hidden="true" />
+              <figcaption>
+                <span>02 · Практика</span>
+                <strong>Работа с упражнениями в зале</strong>
+              </figcaption>
+            </figure>
+
+            <figure className="graduate-photo graduate-photo--community">
+              <Image
+                src="/graduates/pilates-graduates.jpg"
+                alt="Группа выпускников направления Pilates с сертификатами"
+                fill
+                sizes="(max-width: 800px) 100vw, 40vw"
+              />
+              <div className="graduate-photo__shade" aria-hidden="true" />
+              <figcaption>
+                <span>03 · Сообщество</span>
+                <strong>Люди, объединённые профессией</strong>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="graduate-outcomes" aria-label="Результаты обучения">
+            <article>
+              <span aria-hidden="true">01</span>
+              <h3>Системные знания</h3>
+              <p>Профессиональная база по выбранному направлению подготовки.</p>
+            </article>
+            <article>
+              <span aria-hidden="true">02</span>
+              <h3>Практические навыки</h3>
+              <p>Отработка упражнений, программ и презентации материала.</p>
+            </article>
+            <article>
+              <span aria-hidden="true">03</span>
+              <h3>Сертификат</h3>
+              <p>Документ о завершении программы уже входит в стоимость.</p>
+            </article>
+          </div>
+
+          <footer className="graduates__footer">
+            <p>Настоящая учебная жизнь школы — без постановочных стоковых историй.</p>
+            <a className="button" href="tel:+79786456072">
+              Стать выпускником
+              <span aria-hidden="true">↗</span>
+            </a>
+          </footer>
+        </div>
+      </section>
     </main>
   );
 }
