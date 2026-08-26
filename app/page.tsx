@@ -88,6 +88,46 @@ const learningStages = [
   },
 ];
 
+const teachers = [
+  {
+    number: '01',
+    name: 'Игорь Майструк',
+    role: 'Основатель и методист школы',
+    image: '/teachers/igor-maistruk.jpg',
+    alt: 'Игорь Майструк — основатель и методист Fitness Pride',
+    position: '50% 34%',
+    areas: ['Тренажёрный зал', 'Анатомия', 'Питание', 'Pilates и TRX'],
+    featured: true,
+  },
+  {
+    number: '02',
+    name: 'Сергей Зуйков',
+    role: 'Преподаватель теоретических дисциплин',
+    image: '/teachers/sergey-zuykov.jpg',
+    alt: 'Сергей Зуйков — преподаватель Fitness Pride',
+    position: '50% 35%',
+    areas: ['Анатомия', 'Физиология', 'Основы питания'],
+  },
+  {
+    number: '03',
+    name: 'Виктория Бербик',
+    role: 'Методист · Аквафитнес',
+    image: '/teachers/victoria-berbik.jpg',
+    alt: 'Виктория Бербик — методист Fitness Pride',
+    position: '50% 34%',
+    areas: ['Аквафитнес', 'Аквааэробика', 'Групповые программы'],
+  },
+  {
+    number: '04',
+    name: 'Ирина Гавриленко',
+    role: 'Преподаватель групповых программ',
+    image: '/teachers/irina-gavrilenko.jpg',
+    alt: 'Ирина Гавриленко — преподаватель Fitness Pride',
+    position: '50% 34%',
+    areas: ['Групповые программы', 'Практическая подготовка'],
+  },
+];
+
 function BrandMark() {
   return (
     <a className="brand" href="#top" aria-label="Fitness Pride — на главную">
@@ -469,6 +509,75 @@ export default function Home() {
           <span>Обратная связь</span>
           <i />
           <span>Результат</span>
+        </div>
+      </section>
+
+      <section className="teachers" id="teachers" aria-labelledby="teachers-title">
+        <div className="teachers__accent" aria-hidden="true" />
+        <div className="container">
+          <header className="teachers__heading">
+            <div>
+              <p className="section-kicker section-kicker--dark">04 · Команда школы</p>
+              <p className="section-index section-index--dark" aria-hidden="true">
+                FP / EXPERTS
+              </p>
+            </div>
+            <div>
+              <h2 id="teachers-title">
+                Преподаватели-
+                <em>практики</em>
+              </h2>
+              <p>
+                Профильные специалисты, которые соединяют фундаментальные
+                знания с реальным опытом работы в фитнесе и лично сопровождают
+                обучение.
+              </p>
+            </div>
+          </header>
+
+          <div className="teacher-grid">
+            {teachers.map((teacher) => (
+              <article
+                className={`teacher-card${teacher.featured ? ' teacher-card--featured' : ''}`}
+                key={teacher.number}
+              >
+                <div className="teacher-card__photo">
+                  <Image
+                    src={teacher.image}
+                    alt={teacher.alt}
+                    fill
+                    sizes="(max-width: 520px) 100vw, (max-width: 1020px) 50vw, 25vw"
+                    style={{ objectPosition: teacher.position }}
+                  />
+                  <div className="teacher-card__shade" aria-hidden="true" />
+                  <span className="teacher-card__number" aria-hidden="true">
+                    {teacher.number}
+                  </span>
+                  <p className="teacher-card__role">{teacher.role}</p>
+                </div>
+
+                <div className="teacher-card__content">
+                  <h3>{teacher.name}</h3>
+                  <ul aria-label={`Направления преподавателя: ${teacher.name}`}>
+                    {teacher.areas.map((area) => (
+                      <li key={area}>{area}</li>
+                    ))}
+                  </ul>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <footer className="teachers__footer">
+            <p>
+              Преподаватели остаются на связи и помогают разобраться в
+              материале на каждом этапе обучения.
+            </p>
+            <a href="tel:+79786456072">
+              Задать вопрос команде
+              <span aria-hidden="true">↗</span>
+            </a>
+          </footer>
         </div>
       </section>
     </main>
