@@ -675,6 +675,118 @@ export default function Home() {
           </footer>
         </div>
       </section>
+
+      <section className="about" id="about" aria-labelledby="about-title">
+        <div className="about__line" aria-hidden="true" />
+        <div className="container">
+          <header className="about__heading">
+            <div>
+              <p className="section-kicker section-kicker--dark">06 · О школе</p>
+              <p className="section-index about__index" aria-hidden="true">
+                FP / SCHOOL
+              </p>
+            </div>
+            <div>
+              <h2 id="about-title">
+                Школа, созданная
+                <br />
+                <em>практиками</em>
+              </h2>
+              <p>
+                Fitness Pride строит обучение вокруг профессиональной базы,
+                практической отработки и прямого контакта с теми, кто создаёт
+                учебные программы.
+              </p>
+            </div>
+          </header>
+
+          <article className="founder">
+            <div className="founder__photo">
+              <Image
+                src="/teachers/igor-maistruk.jpg"
+                alt="Игорь Игоревич Майструк — основатель Fitness Pride"
+                fill
+                sizes="(max-width: 800px) 100vw, 45vw"
+                style={{ objectPosition: '50% 34%' }}
+              />
+              <div className="founder__photo-shade" aria-hidden="true" />
+              <p className="founder__photo-label">
+                <span>Основатель</span>
+                <strong>Fitness Pride</strong>
+              </p>
+            </div>
+
+            <div className="founder__content">
+              <p className="founder__eyebrow">Основатель и руководитель школы</p>
+              <h3>
+                Игорь Игоревич
+                <br />
+                Майструк
+              </h3>
+              <p className="founder__lead">
+                Фитнес-тренер, специалист по рациональному питанию, методист и
+                автор образовательных материалов с опытом работы более 15 лет.
+              </p>
+
+              <ul className="founder__credentials">
+                <li>
+                  <span>01</span>
+                  Профильное образование в области адаптивной физической культуры
+                </li>
+                <li>
+                  <span>02</span>
+                  Спортивное образование и практический тренерский опыт
+                </li>
+                <li>
+                  <span>03</span>
+                  Разработка и методическое сопровождение учебных материалов
+                </li>
+              </ul>
+
+              <blockquote>
+                Методисты — создатели программы — лично общаются с
+                обучающимися и помогают разбирать материал без промежуточных
+                кураторов.
+              </blockquote>
+            </div>
+          </article>
+
+          <div className="about__mission">
+            <p>Миссия Fitness Pride</p>
+            <h3>
+              Помогать людям достигать целей в фитнесе и здоровом образе жизни
+              через качественное образование и поддержку.
+            </h3>
+          </div>
+
+          <div className="about-values" aria-label="Ценности Fitness Pride">
+            <article>
+              <span>01</span>
+              <h3>Профессиональные знания</h3>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>Практические навыки</h3>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>Личная поддержка</h3>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Постоянное развитие</h3>
+            </article>
+          </div>
+
+          <footer className="about__footer">
+            <p>Знакомство со школой начинается с разговора о вашей цели.</p>
+            <a href="tel:+79786456072">
+              Обсудить обучение
+              <span aria-hidden="true">↗</span>
+            </a>
+          </footer>
+        </div>
+      </section>
     </main>
   );
 }
