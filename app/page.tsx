@@ -10,6 +10,51 @@ const navigation = [
   { label: 'Контакты', href: '#contacts' },
 ];
 
+const programs = [
+  {
+    number: '01',
+    title: 'Инструктор тренажёрного зала. Персональный тренер',
+    description:
+      'Подготовка к работе в тренажёрном зале: от функциональной анатомии до составления и презентации тренировочных программ.',
+    topics: [
+      'Анатомия и физиология',
+      'Основы рационального питания',
+      'Тренировочные программы',
+      'Первая доврачебная помощь',
+    ],
+    note: 'Персональный тренинг',
+  },
+  {
+    number: '02',
+    title: 'Инструктор групповых программ',
+    description:
+      'Обучение работе с группой, музыкальным квадратам, аэробике и современным форматам групповых занятий.',
+    topics: [
+      'Аэробика и степ-платформа',
+      'Stretching и Pilates',
+      'Tai-bo и функциональные петли TRX',
+      'Анатомия и питание',
+    ],
+    note: 'Групповой фитнес',
+  },
+  {
+    number: '03',
+    title: 'Инструктор-универсал',
+    fullTitle:
+      'Групповые программы и тренажёрный зал. Персональный тренер',
+    description:
+      'Самая полная траектория: объединяет два направления и готовит специалиста к индивидуальной и групповой работе.',
+    topics: [
+      'Два направления в одной программе',
+      'Тренажёрный зал и аэробика',
+      'Практика презентации упражнений',
+      'Скидка 50% на второе направление',
+    ],
+    note: 'Комплексная подготовка',
+    featured: true,
+  },
+];
+
 function BrandMark() {
   return (
     <a className="brand" href="#top" aria-label="Fitness Pride — на главную">
@@ -145,6 +190,86 @@ export default function Home() {
           <span>Практические навыки</span>
           <i />
           <span>Фитнес-индустрия</span>
+        </div>
+      </section>
+
+      <section className="programs" id="programs" aria-labelledby="programs-title">
+        <div className="container">
+          <header className="section-heading">
+            <div>
+              <p className="section-kicker">01 · Направления подготовки</p>
+              <p className="section-index" aria-hidden="true">
+                FP / EDUCATION
+              </p>
+            </div>
+            <div>
+              <h2 id="programs-title">Программы обучения</h2>
+              <p>
+                Выберите направление для старта в профессии или комплексную
+                подготовку для работы в нескольких форматах фитнеса.
+              </p>
+            </div>
+          </header>
+
+          <div className="program-grid">
+            {programs.map((program) => (
+              <article
+                className={`program-card${program.featured ? ' program-card--featured' : ''}`}
+                key={program.number}
+              >
+                <div className="program-card__topline">
+                  <span>{program.number}</span>
+                  <small>{program.note}</small>
+                </div>
+
+                {program.featured && (
+                  <p className="program-card__flag">Самая полная программа</p>
+                )}
+
+                <h3>{program.title}</h3>
+                {program.fullTitle && (
+                  <p className="program-card__subtitle">{program.fullTitle}</p>
+                )}
+                <p className="program-card__description">{program.description}</p>
+
+                <ul>
+                  {program.topics.map((topic) => (
+                    <li key={topic}>
+                      <span aria-hidden="true">+</span>
+                      {topic}
+                    </li>
+                  ))}
+                </ul>
+
+                <a href="tel:+79786456072">
+                  Узнать о программе
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
+
+          <div className="program-facts" aria-label="Общие условия обучения">
+            <p>Общее для всех программ</p>
+            <ul>
+              <li>
+                <strong>2 месяца</strong>
+                <span>период обучения</span>
+              </li>
+              <li>
+                <strong>В любой момент</strong>
+                <span>начало обучения</span>
+              </li>
+              <li>
+                <strong>Навсегда</strong>
+                <span>доступ к модулям</span>
+              </li>
+              <li>
+                <strong>Обратная связь</strong>
+                <span>от методистов школы</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>
