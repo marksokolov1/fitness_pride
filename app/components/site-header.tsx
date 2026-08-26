@@ -51,7 +51,7 @@ export function SiteHeader({ active }: SiteHeaderProps) {
           ))}
         </nav>
 
-        <a className="button button--compact header-cta" href="tel:+79786456072">
+        <a className="button button--compact header-cta" href="/contacts#application-form">
           Записаться
         </a>
 
@@ -70,7 +70,7 @@ export function SiteHeader({ active }: SiteHeaderProps) {
                 {item.label}
               </a>
             ))}
-            <a className="button button--compact" href="tel:+79786456072">
+            <a className="button button--compact" href="/contacts#application-form">
               Записаться
             </a>
           </nav>

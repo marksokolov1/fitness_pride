@@ -48,7 +48,7 @@ export default function Home() {
               практические навыки и личную поддержку методистов.
             </p>
             <div className="hero__actions">
-              <a className="button" href="tel:+79786456072">Записаться на обучение <span aria-hidden="true">↗</span></a>
+              <a className="button" href="/contacts#application-form">Записаться на обучение <span aria-hidden="true">↗</span></a>
               <a className="text-link" href="/programs">Выбрать программу <span aria-hidden="true">→</span></a>
             </div>
             <ul className="hero__principles" aria-label="Принципы обучения">
@@ -145,7 +145,7 @@ export default function Home() {
             <h2>Системные знания. Практические навыки. Сертификат.</h2>
             <p>На сайте — реальные занятия и выпускники школы, а не постановочные истории.</p>
             <div className="home-result__actions">
-              <a className="button" href="tel:+79786456072">Получить консультацию <span aria-hidden="true">↗</span></a>
+              <a className="button" href="/contacts#application-form">Получить консультацию <span aria-hidden="true">↗</span></a>
               <a className="text-link" href="/graduates">Посмотреть выпускников <span aria-hidden="true">→</span></a>
             </div>
           </div>

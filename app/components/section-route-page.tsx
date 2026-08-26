@@ -61,7 +61,7 @@ export function SectionRoutePage({
         </div>
         <div className="container route-page__footer">
           <p>Подробности направления, формата и условий можно уточнить на консультации.</p>
-          <a className="button" href="tel:+79786456072">
+          <a className="button" href="/contacts#application-form">
             Получить консультацию
             <span aria-hidden="true">↗</span>
           </a>

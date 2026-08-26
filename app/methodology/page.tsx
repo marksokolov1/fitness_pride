@@ -287,7 +287,7 @@ export default function MethodologyPage() {
               Обучение рассчитано на два месяца. Темп остаётся гибким, но
               движение по программе сохраняет понятную последовательность.
             </p>
-            <a className="button" href="tel:+79786456072">
+            <a className="button" href="/contacts#application-form">
               Обсудить формат
               <span aria-hidden="true">↗</span>
             </a>
@@ -343,4 +343,3 @@ export default function MethodologyPage() {
     </main>
   );
 }
-

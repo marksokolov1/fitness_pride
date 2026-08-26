@@ -72,7 +72,7 @@ export default function ProgramsPage() {
             <Module number="03" title="Тренировочные программы в тренажёрном зале" topics={gymPractice} accent="Профильная практика" />
             <Module number="04" title="Первая доврачебная помощь" topics={['Лекция по оказанию первой доврачебной медицинской помощи']} />
           </div>
-          <footer className="course__result"><p><strong>Что входит:</strong> обратная связь методистов, домашние задания и тестирование, постоянный доступ к материалам и сертификат после выполнения условий программы.</p><a href="tel:+79786456072">Узнать стоимость <span aria-hidden="true">↗</span></a></footer>
+          <footer className="course__result"><p><strong>Что входит:</strong> обратная связь методистов, домашние задания и тестирование, постоянный доступ к материалам и сертификат после выполнения условий программы.</p><a href="/contacts#application-form">Узнать стоимость <span aria-hidden="true">↗</span></a></footer>
         </div>
       </section>
 
@@ -87,7 +87,7 @@ export default function ProgramsPage() {
             <Module number="03" title="Тренировочные программы в зале аэробики" topics={groupPractice} accent="Профильная практика" />
             <Module number="04" title="Первая доврачебная помощь" topics={['Лекция по оказанию первой доврачебной медицинской помощи']} />
           </div>
-          <footer className="course__result"><p><strong>Формат:</strong> начните в удобный момент, двигайтесь по модулям через задания и тесты и задавайте вопросы методистам на всём пути.</p><a href="tel:+79786456072">Получить консультацию <span aria-hidden="true">↗</span></a></footer>
+          <footer className="course__result"><p><strong>Формат:</strong> начните в удобный момент, двигайтесь по модулям через задания и тесты и задавайте вопросы методистам на всём пути.</p><a href="/contacts#application-form">Получить консультацию <span aria-hidden="true">↗</span></a></footer>
         </div>
       </section>
 
@@ -103,7 +103,7 @@ export default function ProgramsPage() {
             <Module number="03B" title="Практика персонального тренера" topics={gymPractice} accent="Тренажёрный зал" />
             <Module number="04" title="Первая доврачебная помощь" topics={['Лекция по оказанию первой доврачебной медицинской помощи']} />
           </div>
-          <footer className="course__result"><p><strong>В результате:</strong> одна комплексная траектория для работы и с персональными клиентами, и с группами. Сертификат входит в стоимость.</p><a className="button" href="tel:+79786456072">Выбрать программу <span aria-hidden="true">↗</span></a></footer>
+          <footer className="course__result"><p><strong>В результате:</strong> одна комплексная траектория для работы и с персональными клиентами, и с группами. Сертификат входит в стоимость.</p><a className="button" href="/contacts#application-form">Выбрать программу <span aria-hidden="true">↗</span></a></footer>
         </div>
       </section>
 

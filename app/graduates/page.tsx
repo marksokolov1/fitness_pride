@@ -181,7 +181,7 @@ export default function GraduatesPage() {
           <div>
             <p>Расскажите о своей цели — команда школы поможет выбрать подходящее направление и формат обучения.</p>
             <div>
-              <a className="button" href="tel:+79786456072">Получить консультацию <span aria-hidden="true">↗</span></a>
+              <a className="button" href="/contacts#application-form">Получить консультацию <span aria-hidden="true">↗</span></a>
               <a className="text-link" href="/programs">Смотреть программы <span aria-hidden="true">→</span></a>
             </div>
           </div>

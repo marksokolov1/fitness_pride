@@ -57,6 +57,100 @@ export default function ContactsPage() {
         </div>
       </section>
 
+      <section className="application-form" id="application-form" aria-labelledby="application-form-title">
+        <div className="container application-form__grid">
+          <div className="application-form__intro">
+            <p className="section-kicker section-kicker--dark">Заявка на обучение</p>
+            <h2 id="application-form-title">Начните обучение с нами</h2>
+            <p>
+              Заполните короткую форму — администратор Fitness Pride свяжется
+              с вами, ответит на вопросы и поможет выбрать программу.
+            </p>
+            <div className="application-form__contact">
+              <span>Или позвоните напрямую</span>
+              <a href="tel:+79786456072">+7 (978) 645-60-72</a>
+            </div>
+          </div>
+
+          <form
+            className="application-form__fields"
+            action="https://formsubmit.co/fitness_pride_donetsk@mail.ru"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="Новая заявка с сайта Fitness Pride" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://fitness-pride-school.mark-sokolov007.chatgpt.site/thanks" />
+            <input type="hidden" name="_url" value="https://fitness-pride-school.mark-sokolov007.chatgpt.site/contacts" />
+            <label className="application-form__honey" aria-hidden="true">
+              Не заполняйте это поле
+              <input type="text" name="_honey" tabIndex={-1} autoComplete="off" />
+            </label>
+
+            <label>
+              <span>ФИО</span>
+              <input
+                type="text"
+                name="ФИО"
+                autoComplete="name"
+                minLength={5}
+                placeholder="Иванов Иван Иванович"
+                required
+              />
+            </label>
+
+            <label>
+              <span>Номер телефона</span>
+              <input
+                type="tel"
+                name="Телефон"
+                autoComplete="tel"
+                inputMode="tel"
+                pattern="[0-9+()\-\s]{10,}"
+                placeholder="+7 (___) ___-__-__"
+                required
+              />
+            </label>
+
+            <label>
+              <span>Интересующее направление</span>
+              <select name="Направление" defaultValue="" required>
+                <option value="" disabled>Выберите программу</option>
+                <option>Инструктор тренажёрного зала. Персональный тренер</option>
+                <option>Инструктор групповых программ</option>
+                <option>Инструктор-универсал</option>
+                <option>Нужна помощь с выбором</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Формат обучения</span>
+              <select name="Формат обучения" defaultValue="" required>
+                <option value="" disabled>Выберите формат</option>
+                <option>Онлайн</option>
+                <option>Очно в Донецке</option>
+                <option>Хочу обсудить оба формата</option>
+              </select>
+            </label>
+
+            <label className="application-form__consent">
+              <input type="checkbox" name="Согласие на обработку данных" value="Да" required />
+              <span>
+                Соглашаюсь на обработку указанных данных для связи по вопросу
+                обучения.
+              </span>
+            </label>
+
+            <button className="button application-form__submit" type="submit">
+              Отправить заявку <span aria-hidden="true">↗</span>
+            </button>
+            <p className="application-form__note">
+              Обычно мы отвечаем в течение рабочего дня.
+            </p>
+          </form>
+        </div>
+      </section>
+
       <section className="contact-essentials" aria-labelledby="contact-essentials-title">
         <div className="container">
           <header className="contact-detail-heading">
@@ -129,7 +223,7 @@ export default function ContactsPage() {
 
           <div className="contact-consultation__action">
             <p>Консультация ни к чему не обязывает — её задача помочь сделать понятный выбор.</p>
-            <a className="button" href="tel:+79786456072">Обсудить обучение <span aria-hidden="true">↗</span></a>
+            <a className="button" href="#application-form">Обсудить обучение <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
