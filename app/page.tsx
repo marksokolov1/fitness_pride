@@ -1,14 +1,5 @@
 import Image from 'next/image';
-
-const navigation = [
-  { label: 'Главная', href: '#top' },
-  { label: 'Обучение', href: '#programs' },
-  { label: 'Методика', href: '#methodology' },
-  { label: 'Преподаватели', href: '#teachers' },
-  { label: 'Выпускники', href: '#graduates' },
-  { label: 'О школе', href: '#about' },
-  { label: 'Контакты', href: '#contacts' },
-];
+import { SiteHeader } from './components/site-header';
 
 const programs = [
   {
@@ -128,65 +119,10 @@ const teachers = [
   },
 ];
 
-function BrandMark() {
-  return (
-    <a className="brand" href="#top" aria-label="Fitness Pride — на главную">
-      <Image
-        className="brand__image"
-        src="/brand/fitness-pride-logo-512.jpg"
-        alt=""
-        width={48}
-        height={48}
-        priority
-      />
-      <span className="brand__name" aria-hidden="true">
-        FITNESS PR<span>ID</span>E
-      </span>
-    </a>
-  );
-}
-
 export default function Home() {
   return (
     <main id="top" className="site-shell">
-      <header className="site-header">
-        <div className="container site-header__inner">
-          <BrandMark />
-
-          <nav className="desktop-nav" aria-label="Основная навигация">
-            {navigation.map((item) => (
-              <a
-                className={item.href === '#top' ? 'is-active' : undefined}
-                href={item.href}
-                key={item.href}
-              >
-                {item.label}
-              </a>
-            ))}
-          </nav>
-
-          <a className="button button--compact header-cta" href="tel:+79786456072">
-            Записаться
-          </a>
-
-          <details className="mobile-menu">
-            <summary aria-label="Открыть меню">
-              <span />
-              <span />
-            </summary>
-            <nav aria-label="Мобильная навигация">
-              {navigation.map((item) => (
-                <a href={item.href} key={item.href}>
-                  {item.label}
-                </a>
-              ))}
-              <a className="button button--compact" href="tel:+79786456072">
-                Записаться
-              </a>
-            </nav>
-          </details>
-        </div>
-      </header>
+      <SiteHeader active="home" />
 
       <section className="hero" aria-labelledby="hero-title">
         <div className="hero__glow" aria-hidden="true" />
@@ -314,7 +250,7 @@ export default function Home() {
                   ))}
                 </ul>
 
-                <a href="tel:+79786456072">
+                <a href="/programs">
                   Узнать о программе
                   <span aria-hidden="true">↗</span>
                 </a>
@@ -478,8 +414,8 @@ export default function Home() {
               </div>
             </div>
 
-            <a className="button" href="tel:+79786456072">
-              Подобрать программу
+            <a className="button" href="/methodology">
+              Изучить методику
               <span aria-hidden="true">↗</span>
             </a>
           </div>
