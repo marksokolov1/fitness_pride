@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Manrope, Oswald } from 'next/font/google';
+import { SiteFooter } from './components/site-footer';
 import './globals.css';
 
 const manrope = Manrope({
@@ -52,6 +53,7 @@ export default function RootLayout({
     <html lang="ru">
       <body className={`${manrope.variable} ${oswald.variable}`}>
         {children}
+        <SiteFooter />
       </body>
     </html>
   );

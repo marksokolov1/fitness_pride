@@ -92,6 +92,20 @@ export default function ContactsPage() {
         </div>
       </section>
 
+      <section className="contact-socials" aria-labelledby="contact-socials-title">
+        <div className="container contact-socials__grid">
+          <div>
+            <p className="section-kicker">Социальные сети</p>
+            <h2 id="contact-socials-title">Следите за жизнью школы</h2>
+          </div>
+          <div>
+            <a href="https://t.me/igor_maistruk" target="_blank" rel="noreferrer"><span>TG</span><strong>Telegram</strong><b aria-hidden="true">↗</b></a>
+            <a href="https://vk.ru/fitness_pride_donetsk" target="_blank" rel="noreferrer"><span>VK</span><strong>ВКонтакте</strong><b aria-hidden="true">↗</b></a>
+            <a href="https://www.instagram.com/fitness_pride_donetsk/" target="_blank" rel="noreferrer"><span>IG</span><strong>Instagram</strong><b aria-hidden="true">↗</b></a>
+          </div>
+        </div>
+      </section>
+
       <section className="contact-consultation" aria-labelledby="contact-consultation-title">
         <div className="container">
           <header className="contact-detail-heading contact-detail-heading--dark">

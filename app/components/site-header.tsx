@@ -7,6 +7,7 @@ const navigation = [
   { id: 'teachers', label: 'Преподаватели', href: '/teachers' },
   { id: 'graduates', label: 'Выпускники', href: '/graduates' },
   { id: 'about', label: 'О школе', href: '/about' },
+  { id: 'education', label: 'Сведения', href: '/education-info' },
   { id: 'contacts', label: 'Контакты', href: '/contacts' },
 ];
 
@@ -78,4 +79,3 @@ export function SiteHeader({ active }: SiteHeaderProps) {
     </header>
   );
 }
-
