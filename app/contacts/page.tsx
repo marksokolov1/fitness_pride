@@ -80,8 +80,8 @@ export default function ContactsPage() {
             <input type="hidden" name="_subject" value="Новая заявка с сайта Fitness Pride" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://fitness-pride-school.mark-sokolov007.chatgpt.site/thanks" />
-            <input type="hidden" name="_url" value="https://fitness-pride-school.mark-sokolov007.chatgpt.site/contacts" />
+            <input type="hidden" name="_next" value="https://fitnessprideschool.ru/thanks/" />
+            <input type="hidden" name="_url" value="https://fitnessprideschool.ru/contacts/" />
             <label className="application-form__honey" aria-hidden="true">
               Не заполняйте это поле
               <input type="text" name="_honey" tabIndex={-1} autoComplete="off" />

@@ -16,6 +16,7 @@ const oswald = Oswald({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://fitnessprideschool.ru'),
   title: 'Fitness Pride — школа обучения фитнесу',
   description:
     'Подготовка фитнес-тренеров и специалистов через профессиональные знания и практические навыки.',
